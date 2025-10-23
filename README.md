@@ -1,2 +1,3 @@
-# digital-sovereignty
-Digital Sovereignty
+# Digital Sovereignty
+
+How to create ownership of your digital world.
