@@ -15,7 +15,11 @@ So I install Immich to `/home/eminem/services/immich` (if your username was `emi
 
 Then follow [these instructions](https://docs.immich.app/install/docker-compose/).
 
-You'll most likely be storing your data on an external drive. So make sure the drive is mounted before you start Immich. If Immich was auto-started after say a power failure, and the drive was not mounted yet, then shutdown Immich, mount the drive, the start Immich again.
+## Media storage
+
+You'll most likely be storing your data (photos, videos) on an external drive. So make sure the drive is mounted before you start Immich.
+
+If Immich was auto-started after say a power failure, and the drive was not mounted yet, then shutdown Immich, mount the drive, then start Immich again.
 
 ## Managing Immich
 
