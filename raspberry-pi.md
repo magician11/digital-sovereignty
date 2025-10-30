@@ -5,7 +5,9 @@
 
 There are many ways to copy files.
 
-This method will copy files between two locations, including over a network. And resume if there was a loss of connection if you start again.
+This method will copy files between two locations, including over a network. And resume if there was a loss of connection if you start again. 
+
+Also running the same rsync command again, will only copy changes/differences. So if the source directory has more files, or deleted files, it'll update the destination directory. And if nothing is different between the two, running it again even on even a very large source directory like 500Gb, will complete almost instantly.
 
 `rsync -avz source-directory destination-user@destination-device:"destination-directory"`
 
