@@ -1,6 +1,19 @@
 # Raspberry Pi  
 [https://www.raspberrypi.com/](https://www.raspberrypi.com/)
 
+## Copying files
+
+There are many ways to copy files.
+
+This method will copy files between two locations, including over a network. And resume if there was a loss of connection if you start again.
+
+`rsync -avz source-directory destination-user@destination-device:"destination-directory"`
+
+**Key**
+- a - Archive mode = recursive, preserves permissions, times, symlinks, etc.
+- v - Verbose output (see what's happening as it is copying)
+- z - Compress data during transfer (great over network)
+
 ## SSH  
 **Enable secure, passwordless SSH using keypair authentication**
 
