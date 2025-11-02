@@ -21,7 +21,9 @@ Also running the same rsync command again, will only copy changes/differences. S
 
 ---
 
-### 1. Generate SSH Keypair (on your laptop)
+### 1. Generate SSH Keypair
+
+First access the device you want to SSH from. So if you want to SSH from your laptop to your raspberry pi, open a terminal on your laptop.
 
 ```bash
 ssh-keygen -t ed25519 -C "macbook-air-2013"
@@ -34,7 +36,7 @@ ssh-keygen -t ed25519 -C "macbook-air-2013"
 
 ---
 
-### 2. Copy Public Key to Pi
+### 2. Copy Public Key to destination device
 
 ```bash
 # Replace user@raspberrypi with your username on your Pi, and the Pi's IP e.g. tommy@192.168.2.1
