@@ -28,6 +28,8 @@ First access the device you want to SSH from. So if you want to SSH from your la
 ```bash
 ssh-keygen -t ed25519 -C "macbook-air-2013"
 # Press Enter to accept default location (~/.ssh/id_ed25519)
+
+Also no passphrase needed for this
 ```
 
 > This creates:
