@@ -103,6 +103,32 @@ Run `sudo whoami` → should return `root`.
 
 ---
 
+### SSH using Tailscale DNS
+
+Login to your Tailscale dashboard, and go to the DNS tab.
+
+The url is https://login.tailscale.com/admin/dns
+
+There at the top you should see *Tailnet DNS name*. Copy that unique name.
+
+It should look something like `happy-kitty.ts.net`
+
+Now before where you were typing something like
+
+`ssh timmy@192.168.8.111`
+
+to SSH into another machine, you can now type
+
+`ssh timmy@burmese.happy-kitty.ts.net`
+
+where
+- `timmy` is the username on the machine you want to SSH into
+- `burmese` is the name of the machine according your Tailscale [machine names](https://login.tailscale.com/admin/machines)
+
+You can do this from any location. No need to use local IPs anymore!
+
+---
+
 ### Optional: Use **Tailscale SSH** (still testing...)
 
 ```bash
