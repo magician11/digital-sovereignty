@@ -43,7 +43,7 @@ Type `docker compose down`
 
 ## Troubleshooting
 
-Here are some things to check if Immich not working.
+Here are some things to check if Immich is not working.
 
 If there is a power failure, the Pi will turn off, then reboot, and Immich will create a temp fake mount point.
 
@@ -72,7 +72,7 @@ drwxr-xr-x   3 root   root   4096 Feb 14  2025 ..
 drwxr-xr-x   8 merlin merlin 4096 Sep 16 15:11 dc66e7a9-bc0f-41e7-8b59-6ab91576455d
 ```
 
-If you have more than one entry in there that is almost the same, shutdown Immich, unmount the drive, then view this directory again. You should now only see one. This you can archive, by typing `sudo mv dc66e7a9-bc0f-41e7-8b59-6ab91576455d backup`
+If you have more than one entry in there that is almost the same, shutdown Immich, unmount the drive, then view this directory again. You should now only see one. This you can archive, by typing `sudo mv dc66e7a9-bc0f-41e7-8b59-6ab91576455d backup` (replacing that UUID with your drive)
 
 Then re-mount the drive, and you should see just the one mounted drive entry again.
 
