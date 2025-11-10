@@ -40,3 +40,40 @@ Type `docker compose up -d`
 Navigate to the Immich directory as above.
 
 Type `docker compose down`
+
+## Troubleshooting
+
+Here are some things to check if Immich not working.
+
+If there is a power failure, the Pi will turn off, then reboot, and Immich will create a temp fake mount point.
+
+In your `.env` file for your Immich setup (which in this demo is located at `/home/eminem/services/immich`) you'll see two lines something like
+
+```
+UPLOAD_LOCATION=/media/snoop/dc66e7a9-bc0f-41e7-8b59-6ab91576455d/immich
+DB_DATA_LOCATION=/media/snoop/dc66e7a9-bc0f-41e7-8b59-6ab91576455d/immich/immich_db
+```
+
+To view this file you can type
+
+```
+cd /home/snoop/services/immich
+
+less .env
+```
+
+Then goto `/media/snoop` (replace *snoop* with whatever your username is). Then view the directory contents by typing `ls -al`
+
+You'll see something like
+
+```
+drwxr-x---+ 12 root   root   4096 Oct 29 12:45 .
+drwxr-xr-x   3 root   root   4096 Feb 14  2025 ..
+drwxr-xr-x   8 merlin merlin 4096 Sep 16 15:11 dc66e7a9-bc0f-41e7-8b59-6ab91576455d
+```
+
+If you have more than one entry in there that is almost the same, shutdown Immich, unmount the drive, then view this directory again. You should now only see one. This you can archive, by typing `sudo mv dc66e7a9-bc0f-41e7-8b59-6ab91576455d backup`
+
+Then re-mount the drive, and you should see just the one mounted drive entry again.
+
+Now you can start up Immich again.
